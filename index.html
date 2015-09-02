@@ -60,8 +60,25 @@
 				</section>
 
 				<section>
-					<h2>Kolmas sivu</h2>
-					<p>Tähän sittne lisää tekstiä</p>
+					<h2>Tietoliikenneprotokollista</h2>
+					<p>Seuraavat sivut käsittelevät mielestäni kiinnsotavimpia protokollia</p>
+				</section>
+
+				<section>
+					<h2>HTTP</h2>
+					<p>HTTP (HyperText Transfer Protocol) on TCP/IP -protokollapinon sovellustason protokolla, jota web-palvelimet ja selaimet käyttävät kommunikointiin. HTTP-protokolla perustuu asiakas-palvelin malliin, jossa jokaista pyyntöä kohden on yksi vastaus. Käytännössä selain lähettää HTTP-viestin HTTP-palvelimelle, joka palauttaa HTTP-vastauksen.</p>
+					<section>
+						<h3>Asiakas-Palvelin -malli</h3>
+						<p>Asiakas-palvelin -mallissa (Client-Server model) asiakkaat käyttävät palvelimen tarjoamia palveluja. Kommunikointi asiakkaan ja palvelimen välillä tapahtuu siten, että asiakasohjelmisto ja palvelinohjelmisto sijaitsevat erillisissä fyysisissä sijainneissa. Palvelinohjelmisto tarjoaa yhden tai useamman palvelun, joita asiakasohjelmisto käyttää.</p>
+					</section>
+					<section>
+						<h3>HTTP-viestin rakenne 1/2</h3>
+						<p>HTTP-protokollan yli lähetettävät viestit ovat tekstimuotoisia. Viestit koostuvat riveistä jotka muodostavat otsakkeen, sekä riveistä jotka muodostavat viestin rungon. Viestin runkoa ei ole pakko olla olemassa. Viestin loppuminen ilmoitetaan kahdella peräkkäisellä rivinvaihdolla.</p>
+					</section>
+					<section>
+						<h3>HTTP-viestin rakenne 2/2</h3>
+						<p>Palvelimelle lähetettävän viestin, eli kyselyn, ensimmäisellä rivillä on pyyntötapa, halutun resurssin polku ja HTTP-protokollan versionumero.<br><br>Pyyntötapa ilmaisee HTTP-protokollassa käytettävän pyynnön tavan (esim. GET tai POST), polku haluttuun resurssiin kertoo haettavan resurssin sijainnin palvelimella (esim. /index.html), ja HTTP-versio kertoo käytettävän version (esim. HTTP/1.0).<br><br>Esimerkki viestistä: GET /index.html HTTP/1.0</p>
+					</section>
 				</section>
 
 			</div>

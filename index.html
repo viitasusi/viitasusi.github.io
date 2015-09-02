@@ -82,7 +82,56 @@
 						<p>Palvelimelle lähetettävän viestin, eli kyselyn, ensimmäisellä rivillä on pyyntötapa, halutun resurssin polku ja HTTP-protokollan versionumero.<br><br>Pyyntötapa ilmaisee HTTP-protokollassa käytettävän pyynnön tavan (esim. GET tai POST), polku haluttuun resurssiin kertoo haettavan resurssin sijainnin palvelimella (esim. /index.html), ja HTTP-versio kertoo käytettävän version (esim. HTTP/1.0).<br><br>Esimerkki viestistä: GET /index.html HTTP/1.0</p>
 					</section>
 				</section>
-
+				<section>
+					<section>
+						<h2>SOAP</h2>
+						<p>
+							SOAP on yksi Web Service ohjelmistojärjestelmän protokolla, jonka tehtävä on kuljettaa XML-dokumentteja tietoverkkojen yli. 
+							<br><br>
+							SOAP-protokolla rakentuu HTTP:n päälle
+						</p>
+					</section>
+					<section>
+						<h2>Käyttötarkoitus</h2>
+						<p>
+							SOAP-protokollaa käytetään yleisesti esimerkiksi kahen järjestelmän väliseen tietojenvaihtoon. Järjestelmän voivat kommunikoia keskenään ja ohjata toisiaan XML-dokumenttien välityksellä. 
+							<br><br>
+							SOAP-protokollaa ei juuri käytetä avoimessa internetissä. Sen sijaan esimerkiksi monien verkkopalvelujen taustajärjestelmät kommunikoivat SOAP-protokollaa käyttäen.
+						</p>
+					</section>
+					<section>
+						<h2>Viestin rakenne</h2>
+						<p>
+							SOAP-viestin rakenne on erittäin yksinkertainen. Viesti sisältää juurielementin nimeltä Envelope. Tämän elementin sisällä kuljetetaan koko SOAP-viesti. Envelope-elementti sisältää vapaavalintaisen Header-elementin ja pakollisen Body-elementin.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>TCP</h2>
+						<p>
+							TCP on tiedonsiirtoprotokolla, jolla luodaan yhteyksiä tietokoneiden välille. TCP-yhteyksien avulla tietokoneet voivat lähettää toisilleen tavujonoja luotettavasti. TCP-protokolla pitää myös huolta, että paketit saapuvat perille oikeassa järjestyksessä. Tarvittaessa hävinnyt paketti voidaan lähettää uudestaan. <br><br> 
+							Suurin osa Internetin liikenteestä perustuu TCP-protokollaan ja koko TCP/IP-protokollaperhe on saanut nimensä TCP-protokollan perusteella. HTTP-protokolla toimii TCP:n päällä.
+						</p>
+					</section>
+					<section>
+						<h2>TCP-yhteys</h2>
+						<p>
+							TCP-yhteys voidaan jakaa kolmeen osaan:
+							<ul>
+								<li>yhteyden muodostaminen</li>
+								<li>tiedonsiirto</li>
+								<li>yhteyden katkaisu</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Ruuhkanhallinta</h2>
+						<p>
+							Pakettien katoaminen johtuu yleensä ruuhkasta internetin reitittimillä. Näissä tilanteissa reitittimelle saapuu enemmän paketteja kuin se ehtii välittämään eteenpäin. Kun reitittimen puskuri täyttyy, ylimääräiset paketit joudutaan hylkäämään. <br><br> Jos datan lähettäjä vain itsepintaisesti uudelleenlähettäisi paketit, se lisäisi reitittimen ruuhkaa entisestään. Sitä varten TCP-protokollaan on kehitetty ruuhkanhallintamekanismeja. Ruuhkanhallintamekanismit ovat pitäneet internetin käyttökelpoisena, vaikka liikenteen määrä on kasvanut vuosien saatossa räjähdysmäisesti.
+						</p>
+					</section>
+				</section>
 			</div>
 
 		</div>

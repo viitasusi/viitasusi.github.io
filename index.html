@@ -132,6 +132,42 @@
 						</p>
 					</section>
 				</section>
+				<section>
+					<section>
+						<h2>IRC-loki</h2>
+						<p>Botti, joka loggaa irc-kanavan keskustelua</p>
+					</section>
+					<section>
+						<h2>Käskyt</h2>
+						<p>
+						Lähdekoodin kloonaaminen git-reposta: rhc app create irclokki nodejs-0.10 --from-code  https://github.com/jvanhalen/irclokki.git
+						</p>
+					</section>
+					<section>
+						<h2>mysql-cartridge OpenShift-sovellukseen</h2>
+						<p>
+							<ul>
+								<li>rhc cartridge list</li>
+								<li>rhc cartridge add mysql-5.5 -a irclokki</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>tietokannan taulut</h2>
+						<p>
+							<ul>
+								<li>rhc ssh irclokki</li>
+								<li>mysql</li>
+								<li>DROP DATABASE if exists irclog;</li>
+								<li>CREATE DATABASE irclog;</li>
+								<li>USE irclog;</li>
+								<li>CREATE TABLE log (id INT PRIMARY KEY AUTO_INCREMENT, timestamp BIGINT, message TEXT); </li>
+							</ul>
+							<br>
+							Seuraavaksi käynnistetään Openshift-sovellus uudelleen: rhc app-restart irclokki
+						</p>
+					</section>
+				</section>
 			</div>
 
 		</div>
